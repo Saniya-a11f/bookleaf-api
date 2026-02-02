@@ -59,6 +59,11 @@ function calculateBalance(authorId) {
 
 /* ---------------- ROUTES ---------------- */
 
+// ROOT ROUTE
+app.get("/", (req, res) => {
+  res.send("Bookleaf API is running 🚀");
+});
+
 // 1️⃣ GET /authors
 app.get("/authors", (req, res) => {
   const result = authors.map(a => ({
